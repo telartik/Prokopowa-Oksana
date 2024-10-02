@@ -1,0 +1,256 @@
+/* Базові стилі для всіх елементів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f2f2f2; /* Світло-сірий фон */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки */
+header {
+    text-align: left;
+    border-bottom: 3px solid #00b894; /* Зелений колір для заголовка */
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-family: 'Poppins', sans-serif;
+    color: #00b894; /* Яскравий зелений */
+}
+
+h2 {
+    font-size: 1.4em;
+    color: #636e72;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Профіль */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #dfe6e9; /* Світло-сірий */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00b894;
+    margin-right: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #00b894;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #0984e3; /* Синій при наведенні */
+}
+
+/* Основний контент */
+.content {
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffeaa7; /* Світло-жовтий */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #2d3436;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00b894;
+    padding-bottom: 10px;
+}
+
+/* Списки та текст */
+p, ul {
+    font-size: 1.1em;
+    color: #2d3436;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Посилання */
+a {
+    color: #00b894;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0984e3;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #dfe6e9; /* Світло-сірий */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1em;
+    color: #2d3436;
+}
+
+/* Медіа запити для адаптивності */
+
+/* Для планшетів та менших екранів */
+@media (max-width: 1024px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin: 0 0 20px 0;
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Для мобільних телефонів */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .contact-info {
+        font-size: 1em;
+    }
+
+    p, ul {
+        font-size: 1em;
+    }
+}
+
+/* Для маленьких екранів (наприклад, смартфони) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    section {
+        padding: 8px;
+    }
+
+    .contact-info {
+        font-size: 0.9em;
+    }
+
+    p, ul {
+        font-size: 0.9em;
+    }
+}
